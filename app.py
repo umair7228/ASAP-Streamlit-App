@@ -7,8 +7,105 @@ import time
 
 # Set up the app
 st.set_page_config(page_title="Data Sweeper", layout="wide", page_icon="./umair.png")
-st.title("📊 Data Sweeper")
-st.write("Transform your files between CSV and Excel formats with built-in data cleaning and visualization!")
+
+st.markdown("""
+    <style>
+        .st-emotion-cache-1104ytp egexzqm0 {
+            padding: 0px !important;
+            margin-bottom: 0px !important;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Aligns items vertically */
+            width: 100%;
+            margin-bottom: 0px;
+        }
+        .buttons-container {
+            display: flex;
+            gap: 10px;
+        }
+        .buttons-container a {
+            text-decoration: none;
+        }
+        .buttons-container button {
+            padding: 8px 16px;
+            font-size: 14px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            background-color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .buttons-container button:hover {
+            background-color: #f0f0f0;
+        }
+        .hr-tagg {
+            margin-top: -30px;
+        }
+
+        @media (max-width: 1024px) {
+            .buttons-container button {
+                padding: 6px 10px;
+                font-size: 14px;
+            }
+            .title-container h1 {
+                font-size: 40px;
+            }
+            .title-container p {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: center; /* Centers everything */
+                text-align: center;
+            }
+            .buttons-container {
+                justify-content: center;
+                width: 100%;
+                margin-top: 10px; /* Adds spacing for clarity */
+            }
+
+            .buttons-container button {
+                width: 100%; /* Full width buttons for mobile */
+            }
+            .hr-tagg {
+                margin-top: -20px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .title-container h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+# HTML for title & buttons
+st.markdown("""
+    <div class="header-container">
+        <div class="title-container">
+            <h1>📊 Data Sweeper</h1>
+            <p>Transform your files between CSV and Excel formats with built-in data cleaning and visualization!</p>
+        </div>
+        <div class="buttons-container">
+            <a href="https://umair-portfolio-web.vercel.app/" target="_blank">
+                <button>🌍 Portfolio</button>
+            </a>
+            <a href="https://www.linkedin.com/in/umairnawaz7228/" target="_blank">
+                <button>🔗 LinkedIn</button>
+            </a>
+            <a href="https://github.com/umair7228" target="_blank">
+                <button>🐙 GitHub</button>
+            </a>
+        </div>
+    </div>
+    <div class="hr-tagg"><hr></div>
+""", unsafe_allow_html=True)
 
 # Initialize session state
 if "processed_files" not in st.session_state:
